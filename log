@@ -69,3 +69,17 @@ list.c:162:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 4e8cd3a
+Wed 27 Mar 2024 06:25:26 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:138:12: error: unused variable ‘dato’ [-Werror=unused-variable]
+  138 |     void * dato = list->current->data;
+      |            ^~~~
+list.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+88c4d3f
