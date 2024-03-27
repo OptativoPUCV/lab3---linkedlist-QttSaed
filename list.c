@@ -58,20 +58,35 @@ void * nextList(List * list) {
 
 }
 
-void * lastList(List * list) {
-
+void * lastList(List * list) { 
+    if (list == NULL || list->head == NULL){
+        return NULL;
+    }
+    list->current = list->tail;
+    return (void *)list->current->data;
   
-    return NULL;
 }
 
 void * prevList(List * list) {
-
+    if (list == NULL || list->head == NULL || list->current == NULL || list->current->prev == NULL){
+        return NULL;
+    }  
+    list->current = list->current->prev;
+    return (void *)list->current->data;
   
-    return NULL;
 }
 
 void pushFront(List * list, void * data) {
-
+    if (list == NULL){
+        return;
+    }
+    Node * node = createNode(data);
+    if (list->head == NULL){
+        list->head = node;
+        list->tail = node;
+      
+    }
+    
   
 }
 
