@@ -45,7 +45,7 @@ void * firstList(List * list) {
         return NULL;
     }
     list->current = list->head;
-    return (void *)list->current->dato;
+    return (void *)list->current->data;
 
 }
 
