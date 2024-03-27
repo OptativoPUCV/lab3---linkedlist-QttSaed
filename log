@@ -4,3 +4,18 @@ Wed 27 Mar 2024 05:47:21 PM UTC:
  tests:  1|5
 total_score: 10/70
 0efd184
+Wed 27 Mar 2024 05:51:07 PM UTC: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:48:35: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+   48 |     return (void *)list->current->dato;
+      |                                   ^~~~
+      |                                   data
+list.c:50:1: error: control reaches end of non-void function [-Werror=return-type]
+   50 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+a2b412b
